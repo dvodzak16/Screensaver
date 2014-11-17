@@ -51,8 +51,8 @@ if (Button_A)
   
   
 random(8);
-int x=random(8); 
-int y=random(8);
+int x=random(8);             // Each integer is made a value from 0-8
+int y=random(8);            // Therefore each dot has a random place and color
 int z=random(8)+1;
 
 int a=random(8); 
@@ -68,8 +68,8 @@ int u=random(8);
 int v=random(8)+1;
 
 
-for (int i=0; i<8; i++)
-for (int j=0; j<8; j++)
+for (int i=0; i<8; i++)   // This makes the screen one entire color
+for (int j=0; j<8; j++)   
 {
   DrawPx(i,j,e);
   
@@ -77,13 +77,13 @@ for (int j=0; j<8; j++)
 {
 
  
-  DrawPx(x,y,z);
+  DrawPx(x,y,z);         // Each DrawPx command is one dot
   DrawPx(a,b,c);
   DrawPx(p,q,r);
   DrawPx(t,u,v);
   
-  DisplaySlate();
-  delay(100);
+  DisplaySlate();       // Displays the dots
+  delay(100);          // Theres a .1 second delay between each dot display
 }
 
 
